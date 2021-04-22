@@ -1,16 +1,13 @@
 import './App.css';
-import { Helmet } from 'react-helmet'
+import Title from "./components/title";
+import NavBar from "./components/navbar";
 
 function App() {
   return (
-    <div>
-      <Helmet>
-        <title>Zeljko Cumura</title>
-        <meta name="description" content="Kolekcija piva" />
-        <meta name="theme-color" content="#008f68" />
-      </Helmet>      
-
-
+    <div className="w-screen h-screen background">
+      <Title></Title>
+      <NavBar></NavBar>
+      
     </div>
   );
 }
