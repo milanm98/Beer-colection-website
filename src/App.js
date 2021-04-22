@@ -10,7 +10,7 @@ function App() {
       <Title></Title>
       <NavBar></NavBar>
     </div>
-    <div>
+    <div id="search">
       <Beers></Beers>
     </div>
     </main>
