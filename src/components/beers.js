@@ -24,10 +24,10 @@ function Beers(){
     return(
         <main>
             <div className="text-center">
-                <h1 className="text-center text-black font-black my-12 text-3xl"> Pretraga </h1>
-                <input onChange={update} value={input} className="text-center text-white bg-black" type="text"></input>
+                <h1 className="text-center text-white leading-loose font-black text-3xl"> Pretraga </h1>
+                <input onChange={update} value={input} className="w-5/6 h-auto text-center text-white bg-gray-900" type="text"></input>
             </div>
-            <ol type="1" className="text-center my-10 font-black text-1xl">
+            <ol className="text-white my-3 text-center font-black text-1xl">
                 {items}
             </ol>
                         

@@ -4,7 +4,14 @@
 .background{
   background: url("./pozadina.jpg");
   background-position: center center;
-  background-size: cover;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+.content{
+  background: url("./Content.jpg");
+  background-position: center center;
+  background-size: cover !important;
   background-repeat: no-repeat;
 }
 
