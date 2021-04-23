@@ -1,15 +1,6 @@
 import { useState } from "react";
 
-function Beers(){
-
-    const data = [
-        ["Niksicko", "Crna Gora"],
-        ["Jelen", "Srbija"],
-        ["Schneider", "Nemacka"],
-        ["Karlovacko", "Hrvatska"],
-        ["Kariotsko", "Slovenija"],
-        ["Karpatsko", "Karpati"]
-    ]
+function Beers(props){
 
     const [items, setItems] = useState("");
     const [input,setInput] = useState("");
@@ -29,16 +20,16 @@ function Beers(){
         setInput(markdown.target.value);
 
         if(searchType === "name"){
-            setItems(data
+            setItems(props.data
                         .filter(i => i[0].includes(input))
                         .map(i => <li>{i[0]},  {i[1]}</li>) )   
             }
         else{
-            setItems(data
+            setItems(props.data
                         .filter(i => i[1].includes(input))
                         .map(i => <li>{i[0]},  {i[1]}</li>) )   
         }
-        
+    
     }
 
     return(
