@@ -2,6 +2,8 @@ import { useState } from "react";
 
 function Beers(props){
 
+ 
+
     const [items, setItems] = useState("");
     const [input,setInput] = useState("");
     const [searchType, setSearchType] = useState("name");
@@ -21,15 +23,15 @@ function Beers(props){
 
         if(searchType === "name"){
             setItems(props.data
-                        .filter(i => i[0].includes(input))
-                        .map(i => <li>{i[0]},  {i[1]}</li>) )   
+                        .filter(i => i.Ime.includes(input))
+                        .map(i => <li key={i.Ime}>{i.Ime},  {i.Drzava}</li>) )   
             }
         else{
             setItems(props.data
-                        .filter(i => i[1].includes(input))
-                        .map(i => <li>{i[0]},  {i[1]}</li>) )   
+                        .filter(i => i.Drzava.includes(input))
+                        .map(i => <li key={i.Ime}>{i.Ime},  {i.Drzava}</li>) )   
         }
-    
+        
     }
 
     return(

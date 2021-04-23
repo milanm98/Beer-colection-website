@@ -1,0 +1,16 @@
+[
+        {"Ime" : "Niksicko", 
+        "Drzava" : "Crna Gora"},
+
+        {"Ime" : "Jelen", 
+        "Drzava" : "Srbija"},
+
+        {"Ime" : "Karlovacko", 
+        "Drzava" : "Hrvatska"},
+
+        {"Ime" : "Karioptsko", 
+        "Drzava" : "Slovenija"},
+
+        {"Ime" : "Karpatsko", 
+        "Drzava" : "Karpati"}
+]
