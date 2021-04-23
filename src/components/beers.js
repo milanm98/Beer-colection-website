@@ -13,24 +13,42 @@ function Beers(){
 
     const [items, setItems] = useState("");
     const [input,setInput] = useState("");
+    const [searchType, setSearchType] = useState("");
+
+    const updateSelect = ( selected ) => {
+        setSearchType(selected.target.value);
+    }
 
     const update = (markdown) => {
         setInput(markdown.target.value);
-        setItems(data
-                    .filter(i => i[0].includes(input))
-                    .map(i => <li>{i[0]},  {i[1]}</li>) )           
+
+        if(searchType === "name"){
+            setItems(data
+                        .filter(i => i[0].includes(input))
+                        .map(i => <li>{i[0]},  {i[1]}</li>) )   
+            }
+        else{
+            setItems(data
+                        .filter(i => i[1].includes(input))
+                        .map(i => <li>{i[0]},  {i[1]}</li>) )   
+        }
+        
     }
 
     return(
         <main>
-            <div className="text-center">
-                <h1 className="text-center text-white leading-loose font-black text-3xl"> Pretraga </h1>
-                <input onChange={update} value={input} className="w-5/6 h-auto text-center text-white bg-gray-900" type="text"></input>
+            <div className="text-center text-white text-2xl font-black">
+                <select onChange={updateSelect} className="mt-6 w-32 text-white bg-black border-2 border-white">
+                    <option value="country">Drzava</option>
+                    <option value="name">Ime</option>
+                </select>
+                <input onChange={update} value={input} className="border-2 border-white mt-20 w-5/6 h-12 text-2xl text-center text-white bg-gray-900" type="text"></input>
             </div>
-            <ol className="text-white my-3 text-center font-black text-1xl">
-                {items}
-            </ol>
-                        
+            <div className="w-full text-center h-auto bg-gray-900">
+                <ol className="text-white my-3 text-center font-black text-2xl">
+                    {items}
+                </ol>
+            </div>
         </main>       
     )
 }
