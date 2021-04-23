@@ -13,7 +13,7 @@ function Beers(){
 
     const [items, setItems] = useState("");
     const [input,setInput] = useState("");
-    const [searchType, setSearchType] = useState("");
+    const [searchType, setSearchType] = useState("name");
 
     const setCountry = () => {
         setSearchType("country");
